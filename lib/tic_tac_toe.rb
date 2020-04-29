@@ -24,16 +24,14 @@ class TicTacToe
   
   def position_taken?(index)
    if @board[index] == " "
-     return false
+      false
    else
-     return true
+      true
     end
    end
    
    def valid_move?(index)
-   if index.between?(0,8) && !position_taken?(index)
-     true
-  end
+   index.between?(0,8) && !position_taken?(index)
 end
  
   def turn_count
@@ -91,9 +89,8 @@ end
  def play
    until self.over? do
      self.turn
-  end
-  self.winner
-  puts winner ? "Congratulations #{winner}!" : "Cat's Game!"
+   end
+   puts winner ? "Congratulations #{winner}!" : "Cat's Game!"
  end
 end
 
